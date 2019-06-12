@@ -11,7 +11,7 @@ const PostSchema = new mongoose.Schema({
         default: 0
     }
 }, {
-    timestamps: true // creates auditable columns
+    timestamps: true // creates auditable columns (createdAt and updatedAt)
 });
 
 module.exports = mongoose.model('Post', PostSchema);
