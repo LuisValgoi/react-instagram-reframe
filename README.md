@@ -13,6 +13,7 @@ https://rocketseat.com.br/week-7/inscricao
 - `String ${req.some}`: The command `${}` access variables inside a string.
 - `new express.Router()`: Used to manipulate and create routes.
 - `new mongoose.Schema({})`: Specify the definition and table structure.
+- `mongoose.model(sName, oStructure)`: Creates a representation of the given table.
 
 
 # Database
