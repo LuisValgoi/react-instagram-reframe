@@ -6,6 +6,7 @@ https://rocketseat.com.br/week-7/inscricao
 - `yarn add express`: Added the express as dependency.
 - `yarn add nodemon`: Development dependency used to increase the developer tasks.
 - `yarn add mongoose`: Library which helps us to manipulate data and database created using MongoDB.
+- `yarn add multer`: Library which handles body of multipartdata and also automatize upload file process.
 
 # Executed Commands
 - `express()`: This function kind of creates a server on it.
