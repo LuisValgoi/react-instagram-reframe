@@ -38,6 +38,9 @@ module.exports = {
             image: filaNameJPG
         });
 
+        // exposed through websocket that a new post just happened
+        req.io.emit('post', post);
+
         // returning the info of the posted content
         return res.json(post);
     }

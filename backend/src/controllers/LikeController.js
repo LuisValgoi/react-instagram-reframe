@@ -14,6 +14,9 @@ module.exports = {
         // saved the object
         await post.save();
 
+        // exposed through websocket that a new like of a post just happened
+        req.io.emit('like', post);
+
         return res.json(post);
     }
 };

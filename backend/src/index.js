@@ -8,12 +8,25 @@ const cors = require('cors');
 // init application
 const app = express();
 
+// enabled application to use http
+const server = require('http').Server(app);
+
+// enabled application to use websocket
+const webSocketIO = require('io')(server);
+
 // database connection
 mongoose.connect('mongodb+srv://SEMANA:Initial1@cluster0-q7f0j.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true
 });
 
-// exposes the application
+// added a new global 'io' property on each middleware of the app
+app.use((req, res, next) => {
+    req.io = webSocketIO;
+
+    next(); // forced interceptor/middleware to continue executing what it was doing
+});
+
+// exposes the application for any URL/IP/SERVERS
 app.use(cors());
 
 // exposes the files and its content through URI so the frontend can grab it
@@ -24,4 +37,4 @@ app.use('/files', express.static(filesPath));
 app.use(routes);
 
 // attach server to the port
-app.listen(3333);
+server.listen(3333);
