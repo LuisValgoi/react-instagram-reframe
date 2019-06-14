@@ -21,6 +21,9 @@ module.exports = {
             .resize(500)
             .jpeg({quality: 70})
             .toFile(path.resolve(uploadFolderPath, 'resized', image));
+        
+        // removes iamge from the 'uploads/resized' 
+        fs.unlinkSync(filePath);
 
         // effectively creating an object 
         const post = await Post.create({
