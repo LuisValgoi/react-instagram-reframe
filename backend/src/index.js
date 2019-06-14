@@ -12,7 +12,7 @@ const app = express();
 const server = require('http').Server(app);
 
 // enabled application to use websocket
-const webSocketIO = require('io')(server);
+const webSocketIO = require('socket.io')(server);
 
 // database connection
 mongoose.connect('mongodb+srv://SEMANA:Initial1@cluster0-q7f0j.mongodb.net/test?retryWrites=true&w=majority', {
