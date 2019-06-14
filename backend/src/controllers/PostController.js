@@ -13,6 +13,10 @@ module.exports = {
         // creating variables to be used down there   
         const { author, place, description, hashtags } = req.body;
         const { filename: image } = req.file;
+        
+        // transform filename from png to jpg
+        const fileName = image.split('.')[0];
+        const filaNameJPG = `${fileName}.jpg`;
 
         // resize image and saved on the 'uploads/resized' folder
         const filePath = req.file.path;
@@ -20,9 +24,9 @@ module.exports = {
         await sharp(filePath)
             .resize(500)
             .jpeg({quality: 70})
-            .toFile(path.resolve(uploadFolderPath, 'resized', image));
+            .toFile(path.resolve(uploadFolderPath, 'resized', filaNameJPG));
         
-        // removes iamge from the 'uploads/resized' 
+        // removes image from the 'uploads/resized' 
         fs.unlinkSync(filePath);
 
         // effectively creating an object 
@@ -31,7 +35,7 @@ module.exports = {
             place,
             description,
             hashtags, 
-            image
+            image: filaNameJPG
         });
 
         // returning the info of the posted content
