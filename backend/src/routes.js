@@ -4,6 +4,7 @@ const uploadConfig = require('./config/upload');
 const PostController = require('./controllers/PostController');
 const LikeController = require('./controllers/LikeController');
 
+// allows through multer to POST multipartdata (phisical files)
 const routes = new express.Router();
 const upload = multer(uploadConfig);
 
