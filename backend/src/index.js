@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const routes = require('./routes');
 const path = require('path');
+const cors = require('cors');
 
 // init application
 const app = express();
@@ -11,6 +12,9 @@ const app = express();
 mongoose.connect('mongodb+srv://SEMANA:Initial1@cluster0-q7f0j.mongodb.net/test?retryWrites=true&w=majority', {
     useNewUrlParser: true
 });
+
+// exposes the application
+app.use(cors());
 
 // exposes the files and its content through URI so the frontend can grab it
 const filesPath = path.resolve(__dirname, '..', 'uploads', 'resized');
