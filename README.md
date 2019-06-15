@@ -14,7 +14,7 @@ https://rocketseat.com.br/week-7/aulas
 - `yarn add sharp`: Library which handles the image manipulation mainly by compressing the images.
 - `yarn add cors`: Library which exposes app in `reactjs` being accessible by the frontend.
 
-# Concepts & Commands
+### Concepts & Commands
 - `express()`: This function kind of creates a server on it.
 - `'/users', (req, res) => {}`: Middleware / Routes. Kind of an interceptor for the route `/users`.
 - `String ${req.some}`: The command `${}` access variables inside a string.
