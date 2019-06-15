@@ -1,7 +1,7 @@
 # OmniStack Course
 Backend project for the OmnistackCourse.
 
-https://rocketseat.com.br/week-7/inscricao
+https://rocketseat.com.br/week-7/aulas
 
 # Dependencies
 - `yarn init -y`: Initialized the project.
