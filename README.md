@@ -3,7 +3,9 @@ Backend project for the OmnistackCourse.
 
 https://rocketseat.com.br/week-7/aulas
 
-# Backend Dependencies
+# Backend
+
+### Dependencies
 - `yarn init -y`: Initialized the project.
 - `yarn add express`: Added the express as dependency.
 - `yarn add nodemon`: Development dependency used to increase the developer tasks.
@@ -12,11 +14,7 @@ https://rocketseat.com.br/week-7/aulas
 - `yarn add sharp`: Library which handles the image manipulation mainly by compressing the images.
 - `yarn add cors`: Library which exposes app in `reactjs` being accessible by the frontend.
 
-# Frontend Dependencies
-- `yarn create react-app`: It creates a initial react app folder with its default structure.
-- `npx create-react-app`: It creates a initial react app folder with its default structure. [Link](https://github.com/facebook/create-react-app/issues/3614).
-
-# Backend Executed Commands
+# Concepts & Commands
 - `express()`: This function kind of creates a server on it.
 - `'/users', (req, res) => {}`: Middleware / Routes. Kind of an interceptor for the route `/users`.
 - `String ${req.some}`: The command `${}` access variables inside a string.
@@ -24,8 +22,17 @@ https://rocketseat.com.br/week-7/aulas
 - `new mongoose.Schema({})`: Specify the definition and table structure.
 - `mongoose.model(sName, oStructure)`: Creates a representation of the given table.
 
-# Frontend Executed Commands
+# FrontEnd
+
+### Dependencies
+- `yarn create react-app`: It creates a initial react app folder with its default structure.
+- `npx create-react-app`: It creates a initial react app folder with its default structure. [Link](https://github.com/facebook/create-react-app/issues/3614).
+
+### Concepts & Commands
 - `<div id="root"></div>`: All the `React` content goes on it.
+- `<App />`: JSX Syntax. Mix of JavaScript and XML syntaxes.
+- `App.js`: Component. Isolated Piece of Code w/ CSS, HTML and JS.
+- `-webkit-font-smoothing: antialiased !important;` : Let the fonts of the browser more detailed.
 
 # Database
 
