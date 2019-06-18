@@ -1,5 +1,5 @@
 # OmniStack Course
-Backend project for the OmnistackCourse.
+Project for the OmnistackCourse.
 
 https://rocketseat.com.br/week-7/aulas
 
