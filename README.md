@@ -34,6 +34,10 @@ https://rocketseat.com.br/week-7/aulas
 - `<App />`: JSX Syntax. Mix of JavaScript and XML syntaxes.
 - `App.js`: Component. Isolated Piece of Code w/ CSS, HTML and JS.
 - `-webkit-font-smoothing: antialiased !important;` : Let the fonts of the browser more detailed.
+- `import './something.js'`: Acessing a file within your application called `something.js`.
+- `import 'something.js'`: Acessing a `npm` package installed in your application called `something.js`.
+
+> "Everything is javascript
 
 # Database
 
