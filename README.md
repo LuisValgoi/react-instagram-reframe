@@ -36,6 +36,7 @@ https://rocketseat.com.br/week-7/aulas
 - `-webkit-font-smoothing: antialiased !important;` : Let the fonts of the browser more detailed.
 - `import './something.js'`: Acessing a file within your application called `something.js`.
 - `import 'something.js'`: Acessing a `npm` package installed in your application called `something.js`.
+- `<BrowserRouter>`: Mandatory router from all the custom components.
 
 > "Everything is javascript
 
