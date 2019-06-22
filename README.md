@@ -38,8 +38,6 @@ https://rocketseat.com.br/week-7/aulas
 - `import 'something.js'`: Acessing a `npm` package installed in your application called `something.js`.
 - `<BrowserRouter>`: Mandatory router from all the custom components.
 
-> "Everything is javascript
-
 # Database
 
 ### Link
