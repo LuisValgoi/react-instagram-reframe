@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import api from '../services/api';
 
 import './Feed.css'
 
@@ -9,62 +10,53 @@ import send from '../assets/send.svg';
 
 // style class written component
 class Feed extends Component {
+    // when we want some state change (aka request changing dinamically the content)
+    // we use this
+    state = {
+        feed: []
+    }
+    
+    // is invoked immediately after a component is mounted (inserted into the tree).
+    async componentDidMount() {
+        const response = await api.get('posts');
+        
+        // like um setProperty on the root (data)
+        this.setState({
+            feed: response.data
+        });
+    }
+
+    // like onInit
     render() {
         return (
             <section id="post-list">
-                {/* 1st post */}
-                <article>
-                    <header>
-                        <div className="user-info">
-                            <span>Luis Valgoi</span>
-                            <span className="place">RS</span>
-                        </div>
-                        
-                        <img src={more} alt="Mais" />
-                    </header>
+                { this.state.feed.map(post => (
+                    <article key={post._id}>
+                        <header>
+                            <div className="user-info">
+                                <span>{post.author}</span>
+                                <span className="place">{post.place}</span>
+                            </div>
+                            
+                            <img src={more} alt="Mais" />
+                        </header>
 
-                    <img src="http://localhost:3333/files/Screenshot_10.jpg" alt="" />
+                        <img src={`http://localhost:3333/files/${post.image}`} alt="" />
 
-                    <footer>
-                        <div className="actions">
-                            <img src={like} alt="" />
-                            <img src={comment} alt="" />
-                            <img src={send} alt="" />
-                        </div>
-                        <strong>900 curtidas</strong>
-                        <p>
-                            Um post mto tri
-                            <span>#react #omnistack #top</span>
-                        </p>
-                    </footer>
-                </article>
-
-                {/* 2nd post */}
-                <article>
-                    <header>
-                        <div className="user-info">
-                            <span>Luis Valgoi</span>
-                            <span className="place">RS</span>
-                        </div>
-                        
-                        <img src={more} alt="Mais" />
-                    </header>
-
-                    <img src="http://localhost:3333/files/Screenshot_10.jpg" alt="" />
-
-                    <footer>
-                        <div className="actions">
-                            <img src={like} alt="" />
-                            <img src={comment} alt="" />
-                            <img src={send} alt="" />
-                        </div>
-                        <strong>900 curtidas</strong>
-                        <p>
-                            Um post mto tri
-                            <span>#react #omnistack #top</span>
-                        </p>
-                    </footer>
-                </article>
+                        <footer>
+                            <div className="actions">
+                                <img src={like} alt="" />
+                                <img src={comment} alt="" />
+                                <img src={send} alt="" />
+                            </div>
+                            <strong>{post.likes} curtidas</strong>
+                            <p>
+                                {post.description}
+                                <span>{post.hashtags}</span>
+                            </p>
+                        </footer>
+                    </article>
+                )) }
             </section>
         );
     }
