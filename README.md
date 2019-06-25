@@ -1,5 +1,5 @@
-# OmniStack Course
-Project for the OmnistackCourse.
+# Origin
+Project created during the OmnistackCourse from RocketSeat.
 
 https://rocketseat.com.br/week-7/aulas
 
