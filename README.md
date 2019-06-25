@@ -29,6 +29,7 @@ https://rocketseat.com.br/week-7/aulas
 - `npx create-react-app`: It creates a initial react app folder with its default structure. [Link](https://github.com/facebook/create-react-app/issues/3614).
 - `yarn add react-router-dom`: Used to manage routes and URLs inside browser.
 - `yarn add axios`: Used to manage HTTP requests and turn my life eaiser.
+- `yarn add socket.io-client`: Client Side Socket lib manager.
 
 ### Concepts & Commands
 - `<div id="root"></div>`: All the `React` content goes on it.
