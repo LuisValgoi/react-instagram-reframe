@@ -13,6 +13,7 @@ https://rocketseat.com.br/week-7/aulas
 - `yarn add multer`: Library which handles body of multipartdata and also automatize upload file process.
 - `yarn add sharp`: Library which handles the image manipulation mainly by compressing the images.
 - `yarn add cors`: Library which exposes app in `reactjs` being accessible by the frontend.
+- `yarn add eslint -D`: Library which helps the developer to keep a code pattern. 
 
 ### Concepts & Commands
 - `express()`: This function kind of creates a server on it.
