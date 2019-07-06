@@ -1,7 +1,6 @@
 // require
 const express = require('express');
 const mongoose = require('mongoose');
-const routes = require('./routes');
 const path = require('path');
 const cors = require('cors');
 
@@ -13,17 +12,18 @@ const server = require('http').Server(app);
 
 // enabled application to use websocket
 const webSocketIO = require('socket.io')(server);
+const routes = require('./routes');
 
 // database connection
 mongoose.connect('mongodb+srv://SEMANA:Initial1@cluster0-q7f0j.mongodb.net/test?retryWrites=true&w=majority', {
-    useNewUrlParser: true
+  useNewUrlParser: true,
 });
 
 // added a new global 'io' property on each middleware of the app
 app.use((req, res, next) => {
-    req.io = webSocketIO;
+  req.io = webSocketIO;
 
-    next(); // forced interceptor/middleware to continue executing what it was doing
+  next(); // forced interceptor/middleware to continue executing what it was doing
 });
 
 // exposes the application for any URL/IP/SERVERS

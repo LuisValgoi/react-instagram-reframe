@@ -8,9 +8,7 @@ const LikeController = require('./controllers/LikeController');
 const routes = new express.Router();
 const upload = multer(uploadConfig);
 
-routes.get('/user', (req, res) => {
-    return res.send(`Hello ${req.query.name}`);
-});
+routes.get('/user', (req, res) => res.send(`Hello ${req.query.name}`));
 
 routes.get('/posts', PostController.index);
 routes.post('/posts', upload.single('image'), PostController.store);
