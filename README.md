@@ -31,6 +31,7 @@ https://rocketseat.com.br/week-7/aulas
 - `yarn add react-router-dom`: Used to manage routes and URLs inside browser.
 - `yarn add axios`: Used to manage HTTP requests and turn my life eaiser.
 - `yarn add socket.io-client`: Client Side Socket lib manager.
+- `yarn add styled-components`: Library which helps us by creating our app's styling.
 
 ### Concepts & Commands
 - `<div id="root"></div>`: All the `React` content goes on it.
