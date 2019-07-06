@@ -42,11 +42,11 @@ https://rocketseat.com.br/week-7/aulas
 - `import 'something.js'`: Acessing a `npm` package installed in your application called `something.js`.
 - `<BrowserRouter>`: Mandatory router from all the custom components.
 
-# Database
+<!-- # Database
 
 ### Link
 https://cloud.mongodb.com/v2/5d00725a79358e8b4edec31a#clusters
 
 ### User
 - type: `ADMIN` | login: `ADMIN` | password: `Initial1`
-- type: `READ_WRITE` | login: `SEMANA` | password: `Initial1`
+- type: `READ_WRITE` | login: `SEMANA` | password: `Initial1` -->
